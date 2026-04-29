@@ -1,0 +1,50 @@
+print("guessing number")
+import random
+p1=input("Enter player1: ")
+p2=input("Enter player2: ")
+s1 = 10
+s2 = 10
+d1= random.randint(1,10)
+d2 = random.randint(1,10)
+print("___________________PLAYER1 TURN_________________")
+while(True):
+    g1 = int(input("enter any guess: "))
+    s1 = s1 - 1
+    if g1==d1:
+        break
+print("___________________PLAYER2 TURN_________________")
+while(True):
+    g2 = int(input("enter any guess: "))
+    s2 = s2 - 1
+    if g2==d2:
+        break
+print("____________SUMMARY____________")
+print("{}:{}".format(p1,s1))
+print("{}:{}".format(p2,s2))
+print("_______________________________________")
+if s1>s2:
+    print("winner is ",p1)
+elif s2>s1:
+    print("Winner is ",p2)
+else:
+    print("DRAW")
+
+
+#OUTPUT
+guessing number
+Enter player1:  tom
+Enter player2:  jerry
+___________________PLAYER1 TURN_________________
+enter any guess:  3
+enter any guess:  5
+enter any guess:  7
+enter any guess:  8
+___________________PLAYER2 TURN_________________
+enter any guess:  9
+enter any guess:  3
+enter any guess:  6
+____________SUMMARY____________
+tom:6
+jerry:7
+_______________________________________
+Winner is  jerry
