@@ -48,3 +48,56 @@ Enter your Password: Bhavya78#rt
 STRONG
 
                 
+#program3 
+print("DIGITAL CLOCK")
+import time
+import sys
+h=3
+m=45
+s=0
+while True:
+    sys.stdout.write("\r {:02d} : {:02d} :{:02d} " .format(h,m,s))
+    sys.stdout.flush()
+    time.sleep(1)
+    s=s+1
+    if s== 60:
+        s=0
+        m=m+1
+    if m==60:
+        m=0
+        s=0
+        h=h+1
+    if h==13:
+        s=0
+        h=1
+        m=0
+
+
+
+#program4
+print("date and time")
+from datetime import datetime
+import pytz
+a=pytz.timezone("Asia/Tokyo")
+b=datetime.now(a)
+print(b)
+
+
+#program5
+print("all timezones")
+from datetime import datetime
+import pytz
+a=pytz.timezone("Asia/Tokyo")
+b=datetime.now(a)
+print(b)
+for i in pytz.all_timezones:
+    print(i)
+
+
+#program 6
+print("date and time")
+from datetime import datetime
+import pytz
+a=pytz.timezone("Asia/Kolkata")
+b=datetime.now(a)
+print(b)
