@@ -1,0 +1,116 @@
+
+#program1
+areas
+def sq():
+    s=int(input("Enter side: "))
+    print("Area: ",s*s)
+def rect(l,b):
+    print("Area: ",l*b)
+def cir():
+    r=int(input("Enter radius: "))
+    return 3.14*r*r
+def tri(b,h):
+    return 0.5*b*h
+
+while True:
+    print("1.Square(I)")
+    print("2.Rectangle(II)")
+    print("3.Circle(III)")
+    print("4.Triangle(IV)")
+    print("5.Exit")
+    ch = int(input("Enter your choice: "))
+    if ch==1:
+        sq()
+    elif ch==2:
+        l=int(input("Enter len: "))
+        b=int(input("Enter breadth: "))
+        rect(l,b)
+    elif ch==3:
+        x=cir()
+        print("Area: ",x)
+    elif ch==4:
+        b=int(input("Enter base: "))
+        h=int(input("Enter height: "))
+        y=tri(b,h)
+        print("Area: ",y)
+    else:
+       break
+
+
+  #output
+          1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  1
+Enter side:  12
+Area:  144
+1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  2
+Enter len:  34
+Enter breadth:  8
+Area:  272
+1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  3
+Enter radius:  45
+Area:  6358.500000000001
+1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  4
+Enter base:  10
+Enter height:  23
+Area:  115.0
+1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  5
+1.Square(I)
+2.Rectangle(II)
+3.Circle(III)
+4.Triangle(IV)
+5.Exit
+Enter your choice:  5
+
+
+  #program 2
+  print("3D prime")
+def prime(n):
+    if n<=1:
+        return False
+    else:
+        for i in range(2,n):
+            if n%i==0:
+                return False
+        return True
+def sod(n):
+    d =[int(i) for i in str(n)]
+    return sum(d)
+def every(n):
+    for i in range(3):
+        d=n%10
+        n=n//10
+        if not prime(d):
+            return False
+    return True
+
+for i in range(100,1000):
+    if prime(i) and  prime(sod(i)) and every(i):
+        print(i,end=" ")
+
+      #output
+      3D prime
+223 227 337 353 373 557 577 733 757 773 
