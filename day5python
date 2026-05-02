@@ -67,3 +67,27 @@ for i in range(11):
 *                   * 
 *                   * 
 *                   * 
+
+
+
+#Program3
+a=int(input("Ishitha enter any num:"))
+nums=[]
+while True:
+    if a==1:
+        print("Happy number")
+        break
+    elif a in nums:
+        break
+    else:
+        nums.append(a)
+        a=sum(int(i)*int(i) for i in str(a))
+if a==1:
+    print("Round")
+else:
+    print("Not Round")
+
+#output
+Ishitha enter any num: 19
+Happy number
+Round
