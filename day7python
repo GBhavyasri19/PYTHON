@@ -17,3 +17,42 @@ b.display()
 #OUTPUT          
 Addtion is 150
 Addtion is 180
+
+
+#Program2
+x="INDIA"
+class ace:
+    def give_details(self,a,b,c,d):
+        self.tot=a+b+c
+        self.name=d
+
+    def display(self):
+        print("1.Name = ",self.name)
+        print("2.Mark = ",self.tot)
+        print("3.COUNTRY ",x)
+
+class bvrit:
+    def give_details(self,a,b,c,d):
+        self.tot=a+b+c
+        self.name=d
+
+    def display(self):
+        print("1.Name = ",self.name)
+        print("2.Mark = ",self.tot)
+        print("3.COUNTRY ",x)
+
+
+a=ace()
+a.give_details(20,30,40,"vijay")
+a.display()
+b=bvrit()
+b.give_details(30,40,50,"pavi")
+b.display()
+
+#output
+1.Name =  vijay
+2.Mark =  90
+3.COUNTRY  INDIA
+1.Name =  pavi
+2.Mark =  120
+3.COUNTRY  INDIA
