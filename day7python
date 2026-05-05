@@ -56,3 +56,18 @@ b.display()
 1.Name =  pavi
 2.Mark =  120
 3.COUNTRY  INDIA
+
+
+#program 3 
+#QRCODE 
+import qrcode
+qr=qrcode.QRCode()
+a ="TVK is Rocking"
+qr.add_data(a)
+qr.make(fit=True)
+res=qr.make_image(fill_color="black",back_color="White")
+res.save("bunny.png")
+print("Created Bunny")
+
+#output
+Created Bunny
