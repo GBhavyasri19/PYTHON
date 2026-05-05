@@ -16,3 +16,37 @@ bunny(a)
   prime factorization
   Enter Your Num: 100
     2 2 5 5 
+
+
+
+
+#program 2
+displaying radius for circle
+class circle:
+    def __init__(self):
+        x=int(input("Enter Radius:"))
+        self.r=x
+    def display(self):
+        print("Area is: ",3.14*self.r**2)
+
+a=int(input("Enter num of circle: "))
+l=[]
+for i in range(a):
+    c=circle()
+    l.append(c)
+    c.display()
+    print("_____________________________________")
+#output
+Enter num of circle:  4
+Enter Radius: 12
+Area is:  452.16
+_____________________________________
+Enter Radius: 5
+Area is:  78.5
+_____________________________________
+Enter Radius: 24
+Area is:  1808.64
+_____________________________________
+Enter Radius: 9
+Area is:  254.34
+_____________________________________
