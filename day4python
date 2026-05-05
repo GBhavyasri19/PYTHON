@@ -1,0 +1,43 @@
+#program1
+names = ["RAM","RANI","SITA","KIRAN","HIRA"]
+marks = [[56,45,89],[23,90,67],[87,76,99],[45,68,90],[88,92,70]]
+for i in range(5):
+    p = sum(marks[i])//3
+    if p>80:
+        g = "S"
+    elif p<40:
+        g = "F"
+    elif  p>40 and p<60:
+        g = "B"
+    else :
+        g = "A"
+    print("{}.Mr/Mrs {} has scored {}% - {} Grade".format(i+1,names[i].title(),p,g))
+
+    #output
+1.Mr/Mrs Ram has scored 63% - A Grade
+2.Mr/Mrs Rani has scored 60% - A Grade
+3.Mr/Mrs Sita has scored 87% - S Grade
+4.Mr/Mrs Kiran has scored 67% - A Grade
+5.Mr/Mrs Hira has scored 83% - S Grade
+
+#program2  
+import random 
+a=int(input("Enter num of teams: "))
+teams=[]
+print("Enter all teams name: ")
+for i in range(a):
+    t = input("enter team name: ")
+    teams.append(t)
+m = int(input("enter num of team meet between teams: "))
+matches=[]
+for i in range(0,a-1):
+    for j in range(i+1,a):
+        for k in range(m):
+            matches.append([teams[i],teams[j]])
+
+random.shuffle(matches)
+pos=1
+for i in matches:
+    print("Match {} : {} vs {} ".format(pos,i[0],i[1]))
+    pos =pos +1
+      
