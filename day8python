@@ -1,0 +1,18 @@
+#program 1
+print("prime factorization")
+def bunny(a):
+    if a==1:
+        return
+    i=2
+    while(a%2 !=0):
+        i=i+1
+    print(i,end=" ")
+    bunny(a/i)
+
+a=int(input("Enter Your Num: "))
+bunny(a)
+
+  #Output
+  prime factorization
+  Enter Your Num: 100
+    2 2 5 5 
